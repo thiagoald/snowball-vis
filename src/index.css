@@ -1,0 +1,25 @@
+html,
+body,
+.container {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* #collapse1 {
+  overflow-y: scroll;
+  height: 200px;
+} */
+
+.d3 {
+  float: bottom;
+  height: 70%;
+}
+
+.seeds {
+  float: bottom;
+  height: 30%;
+}
+
+h1 {
+  font-size: 5px;
+}
