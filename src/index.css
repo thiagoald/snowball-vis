@@ -1,8 +1,36 @@
-html,
-body,
-.container {
-  height: 100%;
+.papersGraph {
+  z-index: -1;
+  min-width: 100%;
   min-height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#paperInfo {
+  background: rgb(250, 250, 250);
+  text-align: center;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  overflow-y: auto;
+}
+
+.paperInfoStart {
+  font-size: 3rem;
+}
+
+.out {
+  fill: rgba(255, 255, 255, 0.521);
+  stroke: rgba(0, 0, 0, 0.336);
+}
+
+.in {
+  fill: rgba(91, 184, 5, 0.521);
+  stroke: rgba(0, 0, 0, 0.336);
+}
+
+.selected {
+  fill: rgba(5, 28, 129, 0.473);
+  stroke: rgba(0, 0, 255, 0.336);
 }
 
 /* #collapse1 {
@@ -10,16 +38,125 @@ body,
   height: 200px;
 } */
 
-.d3 {
-  float: bottom;
-  height: 70%;
+/* .wordFrequency {
+  overflow-y: auto;
+  overflow-x: auto;
+  grid-row: 1;
+  grid-column: 3;
+  height: 80vh;
+} */
+
+#nextbutton {
+  width: fit-content;
+  height: fit-content;
+  align-self: end;
+  justify-self: end;
+  grid-column: 2;
+  grid-row: 3;
+  margin-right: 4rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  z-index: 10;
 }
 
-.seeds {
-  float: bottom;
-  height: 30%;
+#overflowBox {
+  background: rgb(255, 255, 255);
+  overflow-x: auto;
+  overflow-y: auto;
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
-h1 {
-  font-size: 5px;
+.topLevel {
+  display: grid;
+  grid-template-rows: 5% 75% 10% 10%;
+  grid-template-columns: 20% 60% 15% 5%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cache {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+}
+
+#abstract {
+  font-size: 0.8rem;
+  text-align: justify;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card-title {
+  margin-top: 1.5rem;
+}
+
+#paperInfoPlaceholder {
+  background-color: rgb(250, 250, 250);
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#placeholderText {
+  margin-top: 100%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+#authors {
+  font-size: 1rem;
+}
+
+#year {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#accordion {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 2;
+  resize: horizontal;
+}
+
+#accordion {
+  overflow-y: auto;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+#words {
+  table-layout: fixed;
+}
+
+#seedsInput {
+  width: 90%;
+  height: fit-content;
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 4rem;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+#loadPaperSpinner {
+  margin-right: 1rem;
 }

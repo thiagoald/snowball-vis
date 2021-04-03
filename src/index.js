@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
+import { SnowballApp } from "./AppPureD3";
 import "./index.css";
-import { SnowballApp } from "./App";
 
 ReactDom.render(
   <React.StrictMode>

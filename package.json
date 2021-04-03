@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.1",
     "d3": "^6.5.0",
     "jquery": "^3.6.0",
+    "natural": "^4.0.2",
     "node-fetch": "^2.6.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
