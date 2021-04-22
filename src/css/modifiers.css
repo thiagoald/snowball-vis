@@ -1,0 +1,25 @@
+/* Modifiers */
+#filters {
+  margin-top: 1rem;
+}
+
+#tabs {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 3;
+  resize: horizontal;
+  overflow-y: auto;
+  word-break: keep-all;
+  border-color: transparent;
+}
+
+.border {
+  border-left: 1px solid gray;
+}
+
+#words {
+  table-layout: fixed;
+}
+
+.tab {
+  min-height: 95vh;
+}

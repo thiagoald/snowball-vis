@@ -1,395 +1,170 @@
 [
-  {
-    "abstract": "Modeling of rough surfaces with given roughness parameters is studied, where surfaces with Gaussian height distribution and exponential auto-correlation function (ACF) are concerned. A large number of micro topography samples are randomly generated first using the rough surface simulation method with FFT. Then roughness parameters of the simulated roughness profiles are calculated according to parameter definition, and the relationship between roughness parameters and statistical distribution parameters is investigated. The effects of high-pass filtering with different cut-off lengths on the relationship are analyzed. Subsequently, computing formulae of roughness parameters based on standard deviation and correlation length are constructed with mathematical regression method. The constructed formulae are tested with measured data of actual topographies, and the influences of auto-correlation variations at different lag lengths on the change of roughness parameter are discussed. The constructed computing formulae provide an approach to active modeling of rough surfaces with given roughness parameters.",
-    "arxivId": null,
-    "authors": [
-      {
-        "authorId": "145172491",
-        "name": "W. Zhou",
-        "url": "https://www.semanticscholar.org/author/145172491"
-      },
-      {
-        "authorId": "8053206",
-        "name": "Jinyuan Tang",
-        "url": "https://www.semanticscholar.org/author/8053206"
-      },
-      {
-        "authorId": "30662704",
-        "name": "Yan-fei He",
-        "url": "https://www.semanticscholar.org/author/30662704"
-      },
-      {
-        "authorId": "145611622",
-        "name": "C. Zhu",
-        "url": "https://www.semanticscholar.org/author/145611622"
-      }
-    ],
-    "citationVelocity": 0,
-    "citations": [
-      {
-        "arxivId": null,
+    {
+        "id": "3898ac5cde941c4ccace3f63e84c6f4960ff3ad4",
+        "title": "Correlative ex situ and Liquid-Cell TEM Observation of Bacterial Cell Membrane Damage Induced by Rough Surface Topology",
+        "paperAbstract": "Background Nanoscale surface roughness has been suggested to have antibacterial and antifouling properties. Several existing models have attempted to explain the antibacterial mechanism of nanoscale rough surfaces without direct observation. Here, conventional and liquid-cell TEM are implemented to observe nanoscale bacteria/surface roughness interaction. The visualization of such interactions enables the inference of possible antibacterial mechanisms. Methods and Results Nanotextures are synthesized on biocompatible polymer microparticles (MPs) via plasma etching. Both conventional and liquid-phase transmission electron microscopy observations suggest that these MPs may cause cell lysis via bacterial binding to a single protrusion of the nanotexture. The bacterium/protrusion interaction locally compromises the cell wall, thus causing bacterial death. This study suggests that local mechanical damage and leakage of the cytosol kill the bacteria first, with subsequent degradation of the cell envelope. Conclusion Nanoscale surface roughness may act via a penetrative bactericidal mechanism. This insight suggests that future research may focus on optimizing bacterial binding to individual nanoscale projections in addition to stretching bacteria between nanopillars. Further, antibacterial nanotextures may find use in novel applications employing particles in addition to nanotextures on fibers or films.",
         "authors": [
-          { "authorId": "70079115", "name": "V. Hutsaylyuk" },
-          { "authorId": "144177155", "name": "I. Lytvynenko" },
-          { "authorId": "145808063", "name": "P. Maruschak" },
-          { "authorId": "97832253", "name": "V. Dzyura" },
-          { "authorId": "152225125", "name": "Georg Schnell" },
-          { "authorId": "39387078", "name": "H. Seitz" }
+            {
+                "name": "David J Banner",
+                "ids": [
+                    "1603825738"
+                ]
+            },
+            {
+                "name": "Emre  Firlar",
+                "ids": [
+                    "6652929"
+                ]
+            },
+            {
+                "name": "Justas  Jakubonis",
+                "ids": [
+                    "87171804"
+                ]
+            },
+            {
+                "name": "Yusuf  Baggia",
+                "ids": [
+                    "1603785340"
+                ]
+            },
+            {
+                "name": "Jodi K Osborn",
+                "ids": [
+                    "1603914701"
+                ]
+            },
+            {
+                "name": "Reza  Shahbazian-Yassar",
+                "ids": [
+                    "1398515962"
+                ]
+            },
+            {
+                "name": "Constantine M Megaridis",
+                "ids": [
+                    "48807128"
+                ]
+            },
+            {
+                "name": "Tolou  Shokuhfar",
+                "ids": [
+                    "5488056"
+                ]
+            }
         ],
-        "doi": "10.3390/ma13214983",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "bbdb989204963d34d9dd26c6ff3ff47e33e5bc56",
-        "title": "A New Method for Modeling the Cyclic Structure of the Surface Microrelief of Titanium Alloy Ti6Al4V After Processing with Femtosecond Pulses",
-        "url": "https://www.semanticscholar.org/paper/bbdb989204963d34d9dd26c6ff3ff47e33e5bc56",
-        "venue": "Materials",
-        "year": 2020
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "2814313", "name": "R. Frischer" },
-          { "authorId": "1755574", "name": "O. Krejcar" },
-          { "authorId": "145100604", "name": "Ali Selamat" },
-          { "authorId": "144733650", "name": "K. Kuča" }
+        "inCitations": [
+            "ebf851112fbc4f550071c8eb3366f4b9b764957e",
+            "183bc9bc089ed27b0b69fd6926560f8046cfd874",
+            "46b65cd141d8a1824c447d31dba009be79df5152"
         ],
-        "doi": "10.1007/s11771-020-4333-y",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "593d43ec5b0b5c3f261b9bd4aa0a554237ba1141",
-        "title": "3D surface profile diagnosis using digital image processing for laboratory use",
-        "url": "https://www.semanticscholar.org/paper/593d43ec5b0b5c3f261b9bd4aa0a554237ba1141",
-        "venue": "",
-        "year": 2020
-      }
-    ],
-    "corpusId": 136281209,
-    "doi": "10.1007/S11771-017-3415-Y",
-    "fieldsOfStudy": ["Materials Science"],
-    "influentialCitationCount": 0,
-    "is_open_access": false,
-    "is_publisher_licensed": true,
-    "paperId": "e58c2a4bced3eef718bf7c1035d131b51b60c1f0",
-    "references": [
-      {
-        "arxivId": null,
-        "authors": [{ "authorId": "49387585", "name": "J. Wu" }],
-        "doi": "10.1016/J.TRIBOINT.2003.11.005",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "87206eac9d8c973b2c7af93e705deaa4b6e88cee",
-        "title": "Simulation of non-Gaussian surfaces with FFT",
-        "url": "https://www.semanticscholar.org/paper/87206eac9d8c973b2c7af93e705deaa4b6e88cee",
-        "venue": "",
-        "year": 2004
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "40502837", "name": "Gorakh Pawar" },
-          { "authorId": "32116023", "name": "P. Pawlus" },
-          { "authorId": "3811465", "name": "I. Etsion" },
-          { "authorId": "11035316", "name": "B. Raeymaekers" }
+        "outCitations": [
+            "75b814ea1544ac43e9b125ebffb66fd813a0f289",
+            "f809021b1e774f6749ae3cfb6ecc85e87d4dd3ef",
+            "1e5aefea6349f9b227bbf1a5687d008f63a76b18",
+            "5ff7b872b6b7bd53710645249eeed1aba7b67457",
+            "d4d265e4396509dea554dc668658966cdd926cc2",
+            "2aee4885be2e5f590e7fe08c67cc2b71971e25ae",
+            "f2289351ce954fdf3a674701ce75350921273424",
+            "36aed25db32a24a5e69dbfc659940748868a5b1a",
+            "bcda39796507b88c817c12e8152da5ff63d0c8e5",
+            "0fd556aa7612ec914b435830df744888d11532d9",
+            "683a4a676921ef696d9cadb3a1a58e36f11a1b6b",
+            "3555543153d42636bc967a93ede43e4f0f982391",
+            "a64123121d534b1347a56f35a4cac23da03b634a",
+            "b828f5ab495b11055f5d9b15bfe2583cfe8accbe",
+            "042dd6cdbd0c1b34711464b7b3f719d09087539a",
+            "1d8278fd9ccbc5d47b213a081a203fdb048f0960",
+            "bf45899384ddb3646f9204a27981b3da76a22b49",
+            "f1f00abb03031bd58dc1390f2f52da96f2f2468f",
+            "95d0e3521dc1f265b9100370ff3b3e8a5a42b55f",
+            "863e76138e578e6c247629963efbb66b205e44f8",
+            "2e259780c012713921c2b0831a292bc98c042678",
+            "8e399a35673b49838d58b779a0bcd5a1ab7871a0",
+            "1e5a6d01f9c938c6158d92192e42224efa064e31",
+            "6130f8d53c244c6b21b489a89115d5b537fcef31",
+            "99b2e9ea1c56765eff1cdddeaecaa0f092309b14",
+            "e8e6fd8c8b6c8e035e9cb12a48c90468ea4b3bc6",
+            "c9e04581456823d03313e2fdb8ec643fcd0e61b4",
+            "cdf5d3781669336f92ea962cbeb54835e4330fce",
+            "cf722e5eba6b693713003545f5d27b9ca60db3ab",
+            "e8b0c1e73075599cc34124b2711f7a3e7697ad1a",
+            "6ea18d3a9e9d2beacf24094dab6aa7d958e6263f",
+            "2e79f2dcf21d71a73613cd5972c0a5c20bdc7938",
+            "3cd83f1987f32a0a9d251f99a125326e1241143d",
+            "b9fbbb2500ac33e17509e475ff10006c84d338c8",
+            "866984b7ae7b851b7f0d585c51ef7bb30480e790",
+            "7abe0a84cd16033e06f1f3f5214399f21f6b9aee",
+            "a25598c3ad3e9138ba7e7e65eb17f612507dd6f7",
+            "88681a7085edf020351f02ff4c888b9402e1bf2c",
+            "42d8ecf24211dc00a9cd591b03c6a3f2f763716e",
+            "51b59eb47c1022ed780b921782a05164a1dd4989",
+            "80bb8c83108aec5344c2b0f7e60ea6c248ada3de",
+            "236e18890676914ae644af22a39f4ef68e55eaa5",
+            "d9dd019fae4e87629156e201276b54f068bc8eb5",
+            "076931a4ab0c5dfeebd94bc6cc9d331e016915ce",
+            "3c699d4d0939b4207f02f5d1c68feb771ebb4b0d",
+            "b4a2f20cf113bf3e95d588fc785f92ddc5a80a4e",
+            "3160ad95bd3ef8e6d4ec636c64aea60f577a14e2",
+            "2b032e440c0b69d4ac0c80a229119b164a8b9965",
+            "94328b1a9e57070cb6dd6f0f82e04aeb6cf05470",
+            "bc52520e6f758aff7777446261caf4ceb92508b0",
+            "effd87d9c464c66172148579a4e8d6ffba6da20a",
+            "e4bd0a26d72526a0f56b4e0ddb174eae9adecf4f",
+            "d944d2a9377790ea5cc885cefb34242a846ea49b",
+            "9cd552813a249129ec498a5a6c843c6962482081",
+            "f565d74c1aba12ee80b835ea864806e125136e14",
+            "3c7a97e039e673e332fb7db92da5dedb00977851",
+            "a68aa6a90e370b0c7be116f3b679a3b2dd09df93",
+            "d4e2a06a14cfa04cd2213c4de00df4d4df0490e0",
+            "a225a08144e3650516f554c5898e72ec544aa2e5",
+            "cd84872ee58cfba5326c93b017941ec774c60b42",
+            "2bd62536466f06155ed47efb7f50cb8e7635e371",
+            "34340a856c704ae607471b1291488a2d5ab90025",
+            "23edcdf3e7212b79a9ec36170439d0dd9f5df253",
+            "aa163167f51e580c3dcb1aaef00f60b08b6f64a8",
+            "b1e4fbcc5f5d24d8c38f622e66fad760d7cb222e",
+            "62fa0be6d304c0506597f75c4829b414b90de4d0",
+            "d74dd564362bc2c93c571e8f962f7c845d429e77",
+            "6da99bc8ae39e21bb371a925e3776678ad25fbe7",
+            "4635a338336fcd792d35d819e7a65a8982163fbb",
+            "5695efea3bf478aeaad6f4a9760cb4711edcf96e",
+            "103ae280604e2a8e5f55f77878ff4c90483687e6",
+            "dc1ab5d9b5c930d84fba4767c7384cf4e0456b50",
+            "de7aa345c5aad15f40c6d94c9d33fb79596ff499",
+            "73a35a26ac0be6ee183af7bca7ac71accc8c063f",
+            "a03c6ac81d094cca68be5aabe34df5e585b6dd7a",
+            "b0c0ee24646c50de3f1ece2fce10fa5f75e6a99a",
+            "c7daea79031d842e24ecc019cd13b85b762ec37c",
+            "ec163c5a36d01b7ab406a7d1b08ac408d586d8f3",
+            "ea48007249283de218737a235f6a3c2db321d38f",
+            "2f66cac1a380b905921fe8e8c285c1c466761836",
+            "d706fa7d867c1b78adf7fb7dda669c09d34ca2ed",
+            "ebf851112fbc4f550071c8eb3366f4b9b764957e",
+            "2cece6a558c779211b36d094634590a31b249300",
+            "8c89243ba58570778b3be519e0eaafcf82a72dad",
+            "0f9ee07d73c5de8d41bff4e0248e77cba99151f9",
+            "ebfba0b6f0716fc93caef4bcc43e782ea24e8298"
         ],
-        "doi": "10.1115/1.4007760",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "fcc47527063bd2daa6b8ab0d7a5b1f611bcccfad",
-        "title": "The Effect of Determining Topography Parameters on Analyzing Elastic Contact Between Isotropic Rough Surfaces",
-        "url": "https://www.semanticscholar.org/paper/fcc47527063bd2daa6b8ab0d7a5b1f611bcccfad",
-        "venue": "",
-        "year": 2013
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "79779645", "name": "H. Aramaki" },
-          { "authorId": "34221422", "name": "H. S. Cheng" },
-          { "authorId": "98106798", "name": "Y. Chung" }
+        "year": 2020,
+        "s2Url": "https://semanticscholar.org/paper/3898ac5cde941c4ccace3f63e84c6f4960ff3ad4",
+        "sources": [
+            "Medline"
         ],
-        "doi": "10.1115/1.2921653",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "7c80db27ae4f94489aec62dc354c30bfd8c3dc6e",
-        "title": "The Contact Between Rough Surfaces With Longitudinal Texture—Part I: Average Contact Pressure and Real Contact Area",
-        "url": "https://www.semanticscholar.org/paper/7c80db27ae4f94489aec62dc354c30bfd8c3dc6e",
-        "venue": "",
-        "year": 1992
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "143813779", "name": "W. Hirst" },
-          { "authorId": "48821343", "name": "A. Hollander" }
+        "pdfUrls": [],
+        "venue": "International journal of nanomedicine",
+        "journalName": "International Journal of Nanomedicine",
+        "journalVolume": "15",
+        "journalPages": "1929 - 1938",
+        "doi": "10.2147/IJN.S232230",
+        "doiUrl": "https://doi.org/10.2147/IJN.S232230",
+        "pmid": "32256069",
+        "fieldsOfStudy": [
+            "Materials Science",
+            "Medicine"
         ],
-        "doi": "10.1098/rspa.1974.0056",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "859b72ae851e2e8f3d7b0e09b6f76348d4a0ad5c",
-        "title": "Surface finish and damage in sliding",
-        "url": "https://www.semanticscholar.org/paper/859b72ae851e2e8f3d7b0e09b6f76348d4a0ad5c",
-        "venue": "Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences",
-        "year": 1974
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "145505049", "name": "Y. R. Hu" },
-          { "authorId": "11818956", "name": "K. Tønder" }
-        ],
-        "doi": "10.1016/0890-6955(92)90064-N",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "0eaec95b2b53f328b3925960b31dd2232a5b66f8",
-        "title": "Simulation of 3-D random rough surface by 2-D digital filter and fourier analysis",
-        "url": "https://www.semanticscholar.org/paper/0eaec95b2b53f328b3925960b31dd2232a5b66f8",
-        "venue": "",
-        "year": 1992
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "145172491", "name": "W. Zhou" },
-          { "authorId": "8053206", "name": "Jinyuan Tang" },
-          { "authorId": "30662704", "name": "Yan-fei He" }
-        ],
-        "doi": "10.1177/1350650115579212",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "6fddef797378f58fb3cecfeb06f60836f21e5ac0",
-        "title": "Formulae of roughness peak distribution parameters with standard deviation and correlation length",
-        "url": "https://www.semanticscholar.org/paper/6fddef797378f58fb3cecfeb06f60836f21e5ac0",
-        "venue": "",
-        "year": 2015
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "14591446", "name": "D. Novovic" },
-          { "authorId": "52012036", "name": "R. Dewes" },
-          { "authorId": "2629368", "name": "D. Aspinwall" },
-          { "authorId": "46184462", "name": "W. Voice" },
-          { "authorId": "36166976", "name": "P. Bowen" }
-        ],
-        "doi": "10.1016/J.IJMACHTOOLS.2003.10.018",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "a70835412f69b00147f1e5c8bd290a12cfa204e1",
-        "title": "The effect of machined topography and integrity on fatigue life",
-        "url": "https://www.semanticscholar.org/paper/a70835412f69b00147f1e5c8bd290a12cfa204e1",
-        "venue": "",
-        "year": 2004
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "1986344", "name": "C. Hubert" },
-          { "authorId": "46821075", "name": "K. Kubiak" },
-          { "authorId": "3401865", "name": "M. Bigerelle" },
-          { "authorId": "143668091", "name": "A. Dubois" },
-          { "authorId": "2792412", "name": "L. Dubar" }
-        ],
-        "doi": "10.1016/J.TRIBOINT.2014.04.035",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "c3d819141d78859f330c15aa7b49441d2cfb59d7",
-        "title": "Identification of lubrication regime on textured surfaces by multi-scale decomposition",
-        "url": "https://www.semanticscholar.org/paper/c3d819141d78859f330c15aa7b49441d2cfb59d7",
-        "venue": "",
-        "year": 2015
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "153700807", "name": "D. J. Whitehouse" },
-          { "authorId": "152689747", "name": "J. Archard" }
-        ],
-        "doi": "10.1098/rspa.1970.0068",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "4d5e8a957fc2fed5706789926609450ef046a694",
-        "title": "The properties of random surfaces of significance in their contact",
-        "url": "https://www.semanticscholar.org/paper/4d5e8a957fc2fed5706789926609450ef046a694",
-        "venue": "Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences",
-        "year": 1970
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "144136640", "name": "M. Fonte" },
-          { "authorId": "114647637", "name": "F. Romeiro" },
-          { "authorId": "145584438", "name": "M. Freitas" }
-        ],
-        "doi": "10.1016/J.IJFATIGUE.2007.02.027",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "8f486deab1175589af0cdf9a285d6d4c2a48b596",
-        "title": "Environment effects and surface roughness on fatigue crack growth at negative R-ratios",
-        "url": "https://www.semanticscholar.org/paper/8f486deab1175589af0cdf9a285d6d4c2a48b596",
-        "venue": "",
-        "year": 2007
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "113092458", "name": "K. Manesh" },
-          { "authorId": "144465399", "name": "B. Ramamoorthy" },
-          { "authorId": "2889665", "name": "M. Singaperumal" }
-        ],
-        "doi": "10.1016/J.WEAR.2010.02.005",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "928f51a6c86385f7915951dc46f693ba3e51077c",
-        "title": "Numerical generation of anisotropic 3D non-Gaussian engineering surfaces with specified 3D surface roughness parameters",
-        "url": "https://www.semanticscholar.org/paper/928f51a6c86385f7915951dc46f693ba3e51077c",
-        "venue": "",
-        "year": 2010
-      },
-      {
-        "arxivId": null,
-        "authors": [{ "authorId": "12249115", "name": "P. Nayak" }],
-        "doi": "10.1115/1.3451608",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "65db6bc1a5bc2bfb2318e504b9a797c39c9545c9",
-        "title": "Random Process Model of Rough Surfaces",
-        "url": "https://www.semanticscholar.org/paper/65db6bc1a5bc2bfb2318e504b9a797c39c9545c9",
-        "venue": "",
-        "year": 1971
-      }
-    ],
-    "title": "Modeling of rough surfaces with given roughness parameters",
-    "topics": [],
-    "url": "https://www.semanticscholar.org/paper/e58c2a4bced3eef718bf7c1035d131b51b60c1f0",
-    "venue": "",
-    "year": 2017
-  },
-  {
-    "abstract": "The principle of building a computer model of rough-surface microtopography is proposed. A 3D computer model of rough surface is developed and tested. The compliance of reference profile graphs of real surfaces processed using different technologies and 3D models generated by their parameters is estimated.",
-    "arxivId": null,
-    "authors": [
-      {
-        "authorId": "98507578",
-        "name": "O. V. Sutyagin",
-        "url": "https://www.semanticscholar.org/author/98507578"
-      },
-      {
-        "authorId": "144031464",
-        "name": "A. Bolotov",
-        "url": "https://www.semanticscholar.org/author/144031464"
-      },
-      {
-        "authorId": "101404102",
-        "name": "A. A. Rachishkin",
-        "url": "https://www.semanticscholar.org/author/101404102"
-      }
-    ],
-    "citationVelocity": 0,
-    "citations": [
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "98507578", "name": "O. V. Sutyagin" },
-          { "authorId": "144031464", "name": "Alexander Bolotov" },
-          { "authorId": "101404102", "name": "A. A. Rachishkin" }
-        ],
-        "doi": "10.3103/S1068366616030156",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "f4b8967b4674e91122fe7658feb69a52f896de75",
-        "title": "Computer simulation of the contact of rough surfaces",
-        "url": "https://www.semanticscholar.org/paper/f4b8967b4674e91122fe7658feb69a52f896de75",
-        "venue": "",
-        "year": 2016
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "101404102", "name": "A. A. Rachishkin" },
-          { "authorId": "98507578", "name": "O. V. Sutyagin" },
-          { "authorId": "144031464", "name": "Alexander Bolotov" },
-          { "authorId": "144951700", "name": "V. V. Izmailov" }
-        ],
-        "doi": "10.3103/S1068366619010161",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "ee0ed5f57008cf6620bd27ba41a9011688da5f7f",
-        "title": "Study of the Thermal Resistance of Rough-Surfaced Junctions by Computer-Based Simulation",
-        "url": "https://www.semanticscholar.org/paper/ee0ed5f57008cf6620bd27ba41a9011688da5f7f",
-        "venue": "",
-        "year": 2019
-      }
-    ],
-    "corpusId": 113300289,
-    "doi": "10.3103/S1068366615050153",
-    "fieldsOfStudy": ["Engineering"],
-    "influentialCitationCount": 0,
-    "is_open_access": false,
-    "is_publisher_licensed": true,
-    "paperId": "0a9207509796366c5aa4b742bdd48c7c85b0c599",
-    "references": [
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "97806900", "name": "N. B. Demkin" },
-          { "authorId": "144951700", "name": "V. V. Izmailov" }
-        ],
-        "doi": "10.3103/S1068366610010058",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "647a9095425051adb3de90488bb9b5ad6be16d21",
-        "title": "The relation between the friction contact performance and the microgeometry of contacting surfaces",
-        "url": "https://www.semanticscholar.org/paper/647a9095425051adb3de90488bb9b5ad6be16d21",
-        "venue": "",
-        "year": 2010
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "4153221", "name": "K. Komvopoulos" },
-          { "authorId": "32476192", "name": "D. Choi" }
-        ],
-        "doi": "10.1115/1.2920955",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "5c0bc561d33ab3b52fb8858fe50ec6be9e76190c",
-        "title": "Elastic Finite Element Analysis of Multi-Asperity Contacts",
-        "url": "https://www.semanticscholar.org/paper/5c0bc561d33ab3b52fb8858fe50ec6be9e76190c",
-        "venue": "",
-        "year": 1992
-      },
-      {
-        "arxivId": null,
-        "authors": [
-          { "authorId": "144907852", "name": "B. Bhushan" },
-          { "authorId": "50672637", "name": "W. Peng" }
-        ],
-        "doi": "10.1115/1.1488931",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "246e861c6f23f0c17faea5bf85035bd4caf48479",
-        "title": "Contact mechanics of multilayered rough surfaces",
-        "url": "https://www.semanticscholar.org/paper/246e861c6f23f0c17faea5bf85035bd4caf48479",
-        "venue": "",
-        "year": 2002
-      },
-      {
-        "arxivId": null,
-        "authors": [{ "authorId": "40476005", "name": "I. Goryacheva" }],
-        "doi": "10.1016/J.TRIBOINT.2005.04.020",
-        "intent": [],
-        "isInfluential": false,
-        "paperId": "abbb0f099c2274908f51de9a1f46f3457865855e",
-        "title": "Mechanics of discrete contact",
-        "url": "https://www.semanticscholar.org/paper/abbb0f099c2274908f51de9a1f46f3457865855e",
-        "venue": "",
-        "year": 2006
-      }
-    ],
-    "title": "Computer simulation of rough-surface microtopography",
-    "topics": [],
-    "url": "https://www.semanticscholar.org/paper/0a9207509796366c5aa4b742bdd48c7c85b0c599",
-    "venue": "",
-    "year": 2015
-  }
+        "magId": "3012377437",
+        "s2PdfUrl": "",
+        "entities": []
+    }
 ]
