@@ -188,9 +188,13 @@ const applyStyleModifiers = (papers, modifiers) => {
 const makeLevelText = (svgSelection, papers, levelNumber) => {
   var maxY = 0;
   if (papers.length > 0) {
+    var levelTitle = `Level ${levelNumber}`;
+    if (levelNumber === 0) {
+      levelTitle = `Seeds`;
+    }
     svgSelection
       .append("text")
-      .text(`Level ${levelNumber + 1}`)
+      .text(levelTitle)
       .attr("x", papers[0].geometry.x - 2 * radius)
       .attr("y", papers[0].geometry.y)
       .attr("text-anchor", "end")
