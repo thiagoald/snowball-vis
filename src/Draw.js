@@ -263,7 +263,7 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
               .some((d) => d.selected)
           ) {
             d3.select("#paperInfo").attr("class", "visible");
-          setPaperInfo(datum);
+            setPaperInfo(datum);
           }
           if (window.paperInfoState === "hidden") {
             window.paperInfoState = "visible";
@@ -320,7 +320,7 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
       return exit.remove();
     }
   );
-  svg.attr("height", Math.max(maxY, window.innerHeight * 0.7));
+  svg.attr("height", Math.max(maxY + 2 * radius, window.innerHeight * 0.7));
 };
 
 export { makeD3, transitionToNewStyle, attachRectangleSelection };
