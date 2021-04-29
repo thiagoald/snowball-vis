@@ -256,7 +256,15 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
           const paperSelection = d3.selectAll(`#paper${datum.circleID}`);
           datum.currentStyle.stroke = "rgba(255,0,0,0.5)";
           transitionToNewStyle(paperSelection, datum, 20);
+          if (
+            !d3
+              .selectAll("circle")
+              .data()
+              .some((d) => d.selected)
+          ) {
+            d3.select("#paperInfo").attr("class", "visible");
           setPaperInfo(datum);
+          }
           if (window.paperInfoState === "hidden") {
             window.paperInfoState = "visible";
             d3.select("#paperInfoPlaceholder").attr("class", "hidden");
@@ -269,12 +277,21 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
           if (!datum.selected) {
             datum.currentStyle.stroke = "rgba(0,0,0,0.5)";
           }
+          if (
+            !d3
+              .selectAll("circle")
+              .data()
+              .some((d) => d.selected)
+          ) {
+            d3.select("#paperInfo").attr("class", "hidden");
+          }
           transitionToNewStyle(paperSelection, datum, 20);
         })
         .on("click", (event, datum) => {
           datum.selected = !datum.selected;
           if (datum.selected) {
-            datum.currentStyle.stroke = "red";
+            d3.select("#paperInfo").attr("class", "visible");
+            setPaperInfo(datum);
           } else {
             datum.currentStyle.stroke = "rgba(0,0,0,0.5)";
           }
