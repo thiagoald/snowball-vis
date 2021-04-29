@@ -1,6 +1,6 @@
 import { stopwordsFile, initialPapersFile, url as baseURL } from "./constants";
 import { makeD3, transitionToNewStyle } from "./Draw";
-import Paper from "./Paper";
+import Paper, { tokenizer, wordToStem } from "./Paper";
 import * as d3 from "d3";
 import fetch from "node-fetch";
 
@@ -53,9 +53,11 @@ const getSnowball = (
     `&maxPapers=${maxPapers}`;
   console.debug(urlToFetch);
   return fetch(urlToFetch)
-    .then((req) => req.json())
+    .then(
+      (req) => req.json(),
+      (error) => Promise.resolve([])
+    )
     .then((papers) => {
-      // TODO: Fix paperAbstract
       return papers.map((p) => new Paper(p));
     });
 };
@@ -119,11 +121,18 @@ const wordsStyleModifier = (papers) => {
   });
 };
 
-const addWordsCheckboxes = (svgRef, rowsSelection) => {
+const addWordsCheckboxes = (svgRef, rowsSelection, stemsChecked) => {
   rowsSelection.append("td").each((d, i, nodes) => {
     d3.select(nodes[i])
       .append("input")
       .attr("type", "checkbox")
+      .attr("checked", () => {
+        if (stemsChecked.find((s) => s === d.stem) === undefined) {
+          return null;
+        } else {
+          return "true";
+        }
+      })
       .on("click", (event, data) => {
         const { stem, count } = data;
         if (d3.select(event.target).property("checked")) {
@@ -141,7 +150,13 @@ const addWordsCheckboxes = (svgRef, rowsSelection) => {
   });
 };
 
-const fillWordsTable = (svgRef) => {
+const fillWordsTable = (svgRef, sortedBy = "stem") => {
+  const stemsChecked = [];
+  d3.selectAll("#words tbody tr").each((d, i, nodes) => {
+    if (d3.select(nodes[i]).select("input").property("checked")) {
+      stemsChecked.push(d.stem);
+    }
+  });
   const stemHistogram = {};
   [].concat(...window.papers).forEach((paper) => {
     Object.keys(paper.stemDict).forEach((stem) => {
@@ -159,25 +174,39 @@ const fillWordsTable = (svgRef) => {
       }
     });
   });
-  // window.stopwords.forEach((stopword) => {
-  //   delete stemHistogram[stopword];
-  // });
-  const sortedWords = Object.keys(stemHistogram)
-    .map((key) => {
-      return {
-        stem: key,
-        count: stemHistogram[key].count,
-        nPapers: stemHistogram[key].nPapers,
-        words: "".concat(
-          ...Array.from(stemHistogram[key].words).map((w) => " " + w.toString())
-        ),
-      };
-    })
-    .sort((a, b) => a.count - b.count)
-    .reverse();
+  var sortedWords = Object.keys(stemHistogram).map((key) => {
+    return {
+      stem: key,
+      count: stemHistogram[key].count,
+      nPapers: stemHistogram[key].nPapers,
+      words: "".concat(
+        ...Array.from(stemHistogram[key].words).map((w) => " " + w.toString())
+      ),
+    };
+  });
+  if (sortedBy === "count") {
+    sortedWords = sortedWords.sort((a, b) => b.count - a.count);
+  } else if (sortedBy === "nPapers") {
+    sortedWords = sortedWords.sort((a, b) => b.nPapers - a.nPapers);
+  } else if (sortedBy === "stem") {
+    sortedWords = sortedWords.sort((a, b) => a.stem.localeCompare(b.stem));
+  } else {
+    const sortedWordsChecked = [];
+    const sortedWordsNotChecked = [];
+    sortedWords.forEach((w) => {
+      if (stemsChecked.find((s) => s === w.stem) !== undefined) {
+        sortedWordsChecked.push(w);
+      } else {
+        sortedWordsNotChecked.push(w);
+      }
+    });
+    sortedWords = sortedWordsChecked
+      .sort((a, b) => b.nPapers - a.nPapers)
+      .concat(sortedWordsNotChecked);
+  }
   d3.select("#words").selectChild("tbody").remove();
   const rows = tabulate("#words", sortedWords, ["words", "count", "nPapers"]);
-  addWordsCheckboxes(svgRef, rows);
+  addWordsCheckboxes(svgRef, rows, stemsChecked);
 };
 
 const setAuthors = (selection) => {
@@ -192,7 +221,19 @@ const setPaperInfo = (datum) => {
   d3.select("#title").text(`${datum.title}`);
   d3.select("#title").attr("href", `${datum.s2Url}`);
   d3.select("#year").text(`(${datum.year})`);
-  d3.select("#abstract").text(`${datum.paperAbstract}`);
+  var newAbstract = datum.paperAbstract.slice();
+  const wordsToHighlight = new Set();
+  tokenizer.tokenize(datum.paperAbstract).forEach((token) => {
+    if (
+      window.selectedStems.find((w) => w === wordToStem(token)) !== undefined
+    ) {
+      wordsToHighlight.add(token);
+    }
+  });
+  Array.from(wordsToHighlight).forEach((word) => {
+    newAbstract = newAbstract.replace(word, `<strong>${word}</strong>`);
+  });
+  d3.select("#abstract").html(`${newAbstract}`);
   d3.select("#authors")
     .selectAll("a")
     .data(datum.authors)
