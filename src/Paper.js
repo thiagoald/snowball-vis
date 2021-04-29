@@ -8,6 +8,10 @@ const notInStopwords = (word) => {
   return window.stopwords.find((sw) => word === sw) === undefined;
 };
 
+function isNumeric(num) {
+  return !isNaN(num);
+}
+
 class Paper {
   constructor(
     data,
@@ -41,9 +45,9 @@ class Paper {
     this.currentStyle = { ...defaultStyle };
     if (this.paperAbstract !== null) {
       tokenizer.tokenize(this.paperAbstract).forEach((word) => {
-        if (notInStopwords(word)) {
-          const stem = wordToStem(word);
-          const lowerWord = word.toLowerCase();
+        const lowerWord = word.toLowerCase();
+        if (notInStopwords(lowerWord) && !isNumeric(lowerWord)) {
+          const stem = wordToStem(lowerWord);
           if (this.stemDict[stem] !== undefined) {
             this.stemDict[stem].count += 1;
             this.stemDict[stem].words.add(lowerWord);
@@ -150,3 +154,4 @@ class Paper {
 }
 
 export default Paper;
+export { tokenizer, wordToStem };
