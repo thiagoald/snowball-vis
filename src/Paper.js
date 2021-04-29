@@ -5,7 +5,6 @@ var tokenizer = new natural.WordTokenizer();
 const wordToStem = natural.PorterStemmer.stem;
 
 const notInStopwords = (word) => {
-  console.log([word, window.stopwords.find((sw) => word === sw) === undefined]);
   return window.stopwords.find((sw) => word === sw) === undefined;
 };
 
@@ -127,7 +126,6 @@ class Paper {
   createConnections(allPapers) {
     const { incoming, outgoing } = this.allConnections();
     incoming.concat(outgoing).forEach((paper) => {
-      console.log(paper.title);
       const id = paper.id;
       const conn = allPapers.find((p) => p.id === id);
       if (conn !== undefined) {

@@ -55,7 +55,6 @@ const makeSharedWordsTable = () => {
         }
       });
     });
-    console.log(wordsCount);
     d3.selectAll("#sharedWords")
       .selectChild("tbody")
       .selectAll("tr")
@@ -81,7 +80,6 @@ const attachRectangleSelection = (svg) => {
   // Rectangle Selection
   svg.on("mousedown", (eventDown) => {
     if (eventDown.button === 0) {
-      console.log("Mouse down");
       if (svg.select("#selectionRect").length !== 0) {
         svg.select("#selectionRect").remove();
       }
@@ -99,7 +97,6 @@ const attachRectangleSelection = (svg) => {
         y2: eventDown.offsetY,
       };
       svg.on("mousemove", (eventMove) => {
-        console.log("Moving");
         if (eventMove.offsetX <= startX) {
           selectionRect
             .attr("x", eventMove.offsetX)
@@ -122,7 +119,6 @@ const attachRectangleSelection = (svg) => {
         window.selection.y2 = eventMove.offsetY;
       });
       svg.on("mouseup", (eventUp) => {
-        console.log("Mouse up");
         selectionRect.remove();
         svg.on("mousemove", null);
         const x1 = window.selection.x1,
@@ -220,7 +216,6 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
     applyStyleModifiers(papers, window.modifiers);
     applyFilters(papers, window.filters);
   });
-  console.log("making d3");
   const svg = d3.select(svgRef.current);
   var selection = null;
 
@@ -254,7 +249,6 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
       });
       newEnter
         .on("mouseenter", (event, datum) => {
-          console.log(event);
           const paperSelection = d3.selectAll(`#paper${datum.circleID}`);
           datum.currentStyle.stroke = "rgba(255,0,0,0.5)";
           transitionToNewStyle(paperSelection, datum, 20);
@@ -274,7 +268,6 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
           transitionToNewStyle(paperSelection, datum, 20);
         })
         .on("click", (event, datum) => {
-          console.log(`Click ${event}`);
           datum.selected = !datum.selected;
           if (datum.selected) {
             datum.currentStyle.stroke = "red";
@@ -287,7 +280,6 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
       return newEnter;
     },
     (update) => {
-      console.log("updating");
       update
         .transition()
         .duration(500)

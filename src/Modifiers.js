@@ -183,7 +183,6 @@ const Modifiers = ({ properties }) => {
 
   useEffect(() => {
     d3.select("input#filterText.form-control").on("keyup", function (event) {
-      console.log(event);
       if (event.key === "Enter") {
         handleClickAddFilter(svgRef);
       }
