@@ -290,6 +290,7 @@ const makeD3 = (svgRef, levelsUnfiltered, forceUpdate = false) => {
         .on("click", (event, datum) => {
           datum.selected = !datum.selected;
           if (datum.selected) {
+            datum.currentStyle.stroke = "rgba(255,0,0,0.7)";
             d3.select("#paperInfo").attr("class", "visible");
             setPaperInfo(datum);
           } else {
