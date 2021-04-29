@@ -44,13 +44,15 @@ const handleClickAddPapers = (svgRef) => {
       window.papers.slice(-1)[0].map((p) => p.id),
       window.wordsToInclude
     ).then((papers) => {
-      window.papers.push(
-        papers.filter((paper) => {
-          return window.papers.every((level) => {
-            return level.find((p) => p.id === paper.id) === undefined;
-          });
-        })
-      );
+      if (papers.length > 0) {
+        window.papers.push(
+          papers.filter((paper) => {
+            return window.papers.every((level) => {
+              return level.find((p) => p.id === paper.id) === undefined;
+            });
+          })
+        );
+      }
       d3.select("#nextbuttonspinner").style("visibility", "hidden");
       fillWordsTable(svgRef);
       attachRectangleSelection(d3.select(svgRef.current));
