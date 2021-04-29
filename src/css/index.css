@@ -191,3 +191,9 @@ th {
 image:hover {
   cursor: pointer;
 }
+
+strong {
+  background: yellow;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
