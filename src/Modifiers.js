@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import BootstrapTable from "react-bootstrap-table-next";
 import { Dropdown, DropdownButton, Image } from "react-bootstrap";
 import { makeD3, transitionToNewStyle } from "./Draw";
-import { tabulate, wordsStyleModifier } from "./util";
+import { tabulate, fillWordsTable } from "./util";
 import { radius } from "./constants";
 import React, { useEffect, useState } from "react";
 
@@ -141,37 +141,7 @@ const addFilter = (svgRef, filter) => {
 };
 
 const handleClickSort = (svgRef, sortingCriteria) => {
-  const selection = d3.selectAll("#words tbody tr");
-  var data = null;
-  debugger;
-  if (sortingCriteria === "words") {
-    data = selection.data().sort((a, b) => a.words.localeCompare(b.words));
-  } else if (sortingCriteria === "count") {
-    data = selection.data().sort((a, b) => b.count - a.count);
-  } else {
-    data = selection.data().sort((a, b) => b.nPapers - a.nPapers);
-  }
-  selection.remove();
-  const rows = tabulate("#words", data, ["words", "count", "nPapers"]);
-  rows.append("td").each((d, i, nodes) => {
-    d3.select(nodes[i])
-      .append("input")
-      .attr("type", "checkbox")
-      .on("click", (event, data) => {
-        const { stem, count } = data;
-        if (d3.select(event.target).property("checked")) {
-          window.selectedStems.push(stem);
-        } else {
-          window.selectedStems = window.selectedStems.filter((s) => s != stem);
-        }
-        if (window.selectedStems.length > 0) {
-          window.modifiers.words = ["on", wordsStyleModifier];
-        } else {
-          window.modifiers.words = ["off", wordsStyleModifier];
-        }
-        makeD3(svgRef, window.papers);
-      });
-  });
+  fillWordsTable(svgRef, sortingCriteria);
 };
 
 const Modifiers = ({ properties }) => {
@@ -217,7 +187,7 @@ const Modifiers = ({ properties }) => {
                       Words
                       <Image
                         src="sort.svg"
-                        onClick={() => handleClickSort(svgRef, "words")}
+                        onClick={() => handleClickSort(svgRef, "stem")}
                       />
                     </th>
                     <th>
@@ -234,7 +204,13 @@ const Modifiers = ({ properties }) => {
                         onClick={() => handleClickSort(svgRef, "nPapers")}
                       />
                     </th>
-                    <th>Show?</th>
+                    <th>
+                      Show?
+                      <Image
+                        src="sort.svg"
+                        onClick={() => handleClickSort(svgRef, "show")}
+                      />
+                    </th>
                   </tr>
                 </thead>
                 <tbody></tbody>
