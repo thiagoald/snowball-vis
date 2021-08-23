@@ -19,3 +19,9 @@ $ npm start
 ```
 
 The server should be listening on http://localhost:3000.
+
+### Use
+
+To start, insert the hash from the end of a Semantic Scholar document URL. For example: https://www.semanticscholar.org/paper/Snowball-Sampling%3A-A-Purposeful-Method-of-Sampling-Naderifar-Goli/**6aec96da14bbc27c9707bc94a5c42fc96a952571**
+
+![Enter](how_to_use.gif)
